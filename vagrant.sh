@@ -28,7 +28,7 @@ EOL
 
 # Add some other settings.
 cat >/devstack/local.conf <<EOL
-[localrc]
+[[local|localrc]]
 HOST_IP=192.168.99.99
 SERVICE_HOST=$HOST_IP
 
@@ -46,6 +46,24 @@ enable_plugin vitrage https://github.com/openstack/vitrage
 enable_plugin vitrage-dashboard https://github.com/openstack/vitrage-dashboard
 enable_plugin ceilometer https://github.com/openstack/ceilometer
 enable_plugin aodh https://github.com/openstack/aodh
+
+# add notification from nova, neutron and cinder to vitrage
+
+[[post-config|$NOVA_CONF]]
+[DEFAULT]
+notification_topics = notifications,vitrage_notifications
+notification_driver=messagingv2
+
+[[post-config|$NEUTRON_CONF]]
+[DEFAULT]
+notification_topics = notifications,vitrage_notifications
+notification_driver=messagingv2
+
+[[post-config|$CINDER_CONF]]
+[DEFAULT]
+notification_topics = notifications,vitrage_notifications
+notification_driver=messagingv2
+
 EOL
 
 # Start devstack.
