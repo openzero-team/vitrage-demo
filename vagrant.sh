@@ -31,6 +31,7 @@ cat >/devstack/local.conf <<EOL
 [[local|localrc]]
 HOST_IP=192.168.99.99
 SERVICE_HOST=$HOST_IP
+GIT_DEPTH=1
 
 #CINDER_BRANCH=milestone-proposed
 #GLANCE_BRANCH=milestone-proposed
