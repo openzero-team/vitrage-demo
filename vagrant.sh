@@ -44,7 +44,7 @@ GIT_DEPTH=1
 #SWIFT_BRANCH=milestone-proposed
 
 enable_plugin vitrage https://github.com/openstack/vitrage
-enable_plugin vitrage-dashboard https://github.com/openstack/vitrage-dashboard
+enable_plugin vitrage-dashboard https://github.com/openzero-zte/vitrage-dashboard bug/1606783
 enable_plugin ceilometer https://github.com/openstack/ceilometer
 enable_plugin aodh https://github.com/openstack/aodh
 
