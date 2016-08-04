@@ -43,11 +43,8 @@ GIT_DEPTH=1
 #NEUTRON_BRANCH=milestone-proposed
 #SWIFT_BRANCH=milestone-proposed
 
-enable_service vitrage-api
-
 enable_plugin vitrage https://github.com/openstack/vitrage
-enable_plugin vitrage-dashboard https://github.com/openzero-zte/vitrage-dashboard
-enable_plugin python-vitrageclient https://github.com/openstack/python-vitrageclient
+enable_plugin vitrage-dashboard https://github.com/openstack/vitrage-dashboard
 enable_plugin ceilometer https://github.com/openstack/ceilometer
 enable_plugin aodh https://github.com/openstack/aodh
 
