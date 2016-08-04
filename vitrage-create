@@ -1,0 +1,2 @@
+#!/bin/bash
+uvt-kvm create vitrage --memory 8192 --disk 150 --cpu 4
