@@ -1,2 +1,2 @@
 export PATH="`pwd`:$PATH"
-alias vitrage-ssh='uvt-kvm ssh vitrage --insecure'
+alias vitrage-ssh='uvt-kvm ssh vitrage-trusty --insecure'

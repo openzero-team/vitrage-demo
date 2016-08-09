@@ -1,2 +1,3 @@
 #!/bin/bash
-uvt-kvm create vitrage --memory 8192 --disk 150 --cpu 4
+
+uvt-kvm create vitrage-trusty release=trusty --memory 8192 --disk 150 --cpu 4
