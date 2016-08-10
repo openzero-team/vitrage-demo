@@ -1,4 +1,4 @@
-# Create VM with ubuntu cloud images and uvtool
+# Create VM for vitrage function demonstration
 
 In host
 
