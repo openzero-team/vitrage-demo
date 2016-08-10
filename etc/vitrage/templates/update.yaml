@@ -1,0 +1,48 @@
+metadata:
+    name: child_update_to_parent_update
+    description: when a child is updated, set update flag on parent
+definitions:
+    entities:
+        - entity:
+            category: ALARM
+            type: volume.update.start
+            template_id: volume_update
+        - entity:
+            category: ALARM
+            type: instance.updated
+            template_id: instance_update
+        - entity:
+            category: RESOURCE
+            type: cinder.volume
+            template_id: volume
+        - entity:
+            category: RESOURCE
+            type: nova.instance
+            template_id: instance
+    relationships:
+        - relationship:
+            source: volume_update
+            target: volume
+            relationship_type: on
+            template_id : update_on_volume
+        - relationship:
+            source: instance_update
+            target: instance
+            relationship_type: on
+            template_id : update_on_instance
+        - relationship:
+            source: volume
+            target: instance
+            relationship_type: attached
+            template_id : volume_attached_to_instance
+scenarios:
+    - scenario:
+        condition: update_on_volume and volume_attached_to_instance
+        actions:
+            - action:
+               action_type: raise_alarm
+               properties:
+                  alarm_name: instance.updated
+                  severity: low
+               action_target:
+                  target: instance
