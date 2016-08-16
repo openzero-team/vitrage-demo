@@ -9,7 +9,7 @@ definitions:
             template_id: volume_update
         - entity:
             category: ALARM
-            type: aodh
+            type: vitrage
             template_id: instance_update
         - entity:
             category: RESOURCE
@@ -46,3 +46,11 @@ scenarios:
                   severity: low
                action_target:
                   target: instance
+    - scenario:
+        condition: update_on_volume and update_on_instance and volume_attached_to_instance
+        actions:
+            - action:
+                action_type: add_causal_relationship
+                action_target:
+                    source: update_on_volume
+                    target: update_on_instance
