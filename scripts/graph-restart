@@ -1,0 +1,3 @@
+source /devstack/openrc admin admin
+ps -aux|grep vitrage-graph|awk '{print $2;}'|xargs sudo kill -9
+run_process vitrage-graph "/usr/bin/python /usr/local/bin/vitrage-graph --config-file /etc/vitrage/vitrage.conf"

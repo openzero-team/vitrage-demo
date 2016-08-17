@@ -1,0 +1,1 @@
+tail -f /opt/stack/logs/vitrage-graph.log
