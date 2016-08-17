@@ -52,5 +52,5 @@ scenarios:
             - action:
                 action_type: add_causal_relationship
                 action_target:
-                    source: update_on_volume
-                    target: update_on_instance
+                    source: volume_update
+                    target: instance_update
