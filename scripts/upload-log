@@ -1,0 +1,1 @@
+tail -n 300 /opt/stack/logs/vitrage-graph.log|pastebinit
