@@ -6,9 +6,11 @@ definitions:
         - entity:
             category: ALARM
             type: aodh
+            name: 'volume updated'
             template_id: volume_update
         - entity:
             category: ALARM
+            name: 'instance updated'
             type: vitrage
             template_id: instance_update
         - entity:
