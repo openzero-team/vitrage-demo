@@ -14,6 +14,11 @@ definitions:
             name: 'instance updated'
             template_id: instance_update
         - entity:
+            category: ALARM
+            type: vitrage
+            name: 'host updated'
+            template_id: host_update
+        - entity:
             category: RESOURCE
             type: cinder.volume
             template_id: volume
@@ -21,22 +26,31 @@ definitions:
             category: RESOURCE
             type: nova.instance
             template_id: instance
+        - entity:
+            category: RESOURCE
+            type: nova.host
+            template_id: host
     relationships:
         - relationship:
             source: volume_update
             target: volume
             relationship_type: on
-            template_id : update_on_volume
+            template_id: update_on_volume
         - relationship:
             source: instance_update
             target: instance
             relationship_type: on
-            template_id : update_on_instance
+            template_id: update_on_instance
         - relationship:
             source: volume
             target: instance
             relationship_type: attached
-            template_id : volume_attached_to_instance
+            template_id: volume_attached_to_instance
+        - relationship:
+            source: host
+            target: instance
+            relationship_type: contains
+            template_id: host_contains_instance
 scenarios:
     - scenario:
         condition: update_on_volume and volume_attached_to_instance
@@ -49,6 +63,16 @@ scenarios:
                action_target:
                   target: instance
     - scenario:
+        condition: update_on_instance and host_contains_instance
+        actions:
+            - action:
+               action_type: raise_alarm
+               properties:
+                  alarm_name: 'host updated'
+                  severity: low
+               action_target:
+                  target: host
+    - scenario:
         condition: update_on_volume and update_on_instance and volume_attached_to_instance
         actions:
             - action:
@@ -56,3 +80,11 @@ scenarios:
                 action_target:
                     source: volume_update
                     target: instance_update
+    - scenario:
+        condition: update_on_host and update_on_instance and host_contains_instance
+        actions:
+            - action:
+                action_type: add_causal_relationship
+                action_target:
+                    source: instance_update
+                    target: host_update
