@@ -10,8 +10,8 @@ definitions:
             template_id: volume_update
         - entity:
             category: ALARM
-            name: 'instance updated'
             type: vitrage
+            name: 'instance updated'
             template_id: instance_update
         - entity:
             category: RESOURCE
@@ -44,7 +44,7 @@ scenarios:
             - action:
                action_type: raise_alarm
                properties:
-                  alarm_name: instance.updated
+                  alarm_name: 'instance updated'
                   severity: low
                action_target:
                   target: instance
