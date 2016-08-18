@@ -42,6 +42,11 @@ definitions:
             relationship_type: on
             template_id: update_on_instance
         - relationship:
+            source: host_update
+            target: host
+            relationship_type: on
+            template_id: update_on_host
+        - relationship:
             source: volume
             target: instance
             relationship_type: attached
