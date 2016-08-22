@@ -1,8 +1,7 @@
-printf "Updating templates\n"
-cd /etc/vitrage/templates
-curl -O https://raw.githubusercontent.com/openzero-zte/vitrage-demo/master/templates/show-updated.yaml
-vitrage template validate --path /etc/vitrage/templates
-printf "\n"
+printf "Updating demo configuration\n"
+cd /opt/stack/vitrage-demo
+git pull
+
 printf "Updating vitrage\n"
 cd /opt/stack/vitrage
 git pull
