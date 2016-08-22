@@ -1,0 +1,14 @@
+entities:
+ - type: switch
+   name: switch-1
+   id: switch-1 # should be same as name
+   state: available
+   relationships:
+     - type: nova.host
+       name: vitrage-trusty
+       id: vitrage-trusty # should be same as name
+       relation_type: attached
+     - type: switch
+       name: switch-2
+       id: switch-2 # should be same as name
+       relation_type: backup
