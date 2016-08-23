@@ -1,0 +1,249 @@
+{
+  "directed": true,
+  "graph": {},
+  "links": [
+    {
+      "is_deleted": false,
+      "key": "contains",
+      "relationship_type": "contains",
+      "source": 3,
+      "target": 4
+    },
+    {
+      "is_deleted": false,
+      "key": "attached",
+      "relationship_type": "attached",
+      "source": 3,
+      "target": 0
+    },
+    {
+      "is_deleted": false,
+      "key": "contains",
+      "relationship_type": "contains",
+      "source": 3,
+      "target": 1
+    },
+    {
+      "is_deleted": false,
+      "key": "on",
+      "relationship_type": "on",
+      "source": 6,
+      "target": 3,
+      "update_timestamp": "2016-08-22T04:02:19Z"
+    },
+    {
+      "is_deleted": false,
+      "key": "contains",
+      "relationship_type": "contains",
+      "source": 5,
+      "target": 8
+    },
+    {
+      "is_deleted": false,
+      "key": "causes",
+      "relationship_type": "causes",
+      "source": 2,
+      "target": 9,
+      "update_timestamp": "2016-08-22T04:02:19Z"
+    },
+    {
+      "is_deleted": false,
+      "key": "on",
+      "relationship_type": "on",
+      "source": 2,
+      "target": 7
+    },
+    {
+      "is_deleted": false,
+      "key": "attached",
+      "relationship_type": "attached",
+      "source": 7,
+      "target": 4
+    },
+    {
+      "is_deleted": false,
+      "key": "contains",
+      "relationship_type": "contains",
+      "source": 8,
+      "target": 3
+    },
+    {
+      "is_deleted": false,
+      "key": "on",
+      "relationship_type": "on",
+      "source": 9,
+      "target": 4,
+      "update_timestamp": "2016-08-22T04:02:19Z"
+    },
+    {
+      "is_deleted": false,
+      "key": "causes",
+      "relationship_type": "causes",
+      "source": 9,
+      "target": 6,
+      "update_timestamp": "2016-08-22T04:02:19Z"
+    }
+  ],
+  "multigraph": true,
+  "nodes": [
+    {
+      "aggregated_state": "AVAILABLE",
+      "category": "RESOURCE",
+      "graph_index": 0,
+      "id": "switch-1",
+      "is_deleted": false,
+      "is_placeholder": false,
+      "name": "switch-1",
+      "operational_state": "OK",
+      "sample_timestamp": "2016-08-23 01:12:30.619317+00:00",
+      "state": "available",
+      "type": "switch",
+      "update_timestamp": "2016-08-23 01:12:30.619317+00:00",
+      "vitrage_id": "RESOURCE:switch:switch-1"
+    },
+    {
+      "aggregated_state": "ACTIVE",
+      "category": "RESOURCE",
+      "graph_index": 1,
+      "id": "745951df-3d16-40c4-8885-d31dbc6eb4d9",
+      "is_deleted": false,
+      "is_placeholder": false,
+      "name": "nano-2",
+      "operational_state": "OK",
+      "project_id": "d252fae16fad4656a8c854f5b93cdbc2",
+      "sample_timestamp": "2016-08-23 01:12:30.614253+00:00",
+      "state": "ACTIVE",
+      "type": "nova.instance",
+      "update_timestamp": "2016-08-23 01:12:30.614253+00:00",
+      "vitrage_id": "RESOURCE:nova.instance:745951df-3d16-40c4-8885-d31dbc6eb4d9"
+    },
+    {
+      "aggregated_severity": "LOW",
+      "alarm_type": "event",
+      "category": "ALARM",
+      "description": "Alarm when volume.update.start event occurred.",
+      "enabled": true,
+      "event_type": [
+        "volume.update.start"
+      ],
+      "graph_index": 2,
+      "id": "72f786ab-70ba-47d5-9c69-100f80a5eb43",
+      "is_deleted": false,
+      "is_placeholder": false,
+      "name": "volume updated",
+      "operational_severity": "WARNING",
+      "project_id": "d252fae16fad4656a8c854f5b93cdbc2",
+      "repeat_actions": false,
+      "sample_timestamp": "2016-08-23 01:12:30.789043+00:00",
+      "severity": "low",
+      "state": "Active",
+      "type": "aodh",
+      "update_timestamp": "2016-08-18T08:39:57Z",
+      "vitrage_id": "ALARM:aodh:f141b0f1-b170-4073-85f1-fa325cdce94a:volume updated"
+    },
+    {
+      "aggregated_state": "AVAILABLE",
+      "category": "RESOURCE",
+      "graph_index": 3,
+      "id": "vitrage-trusty",
+      "is_deleted": false,
+      "is_placeholder": false,
+      "name": "vitrage-trusty",
+      "operational_state": "OK",
+      "sample_timestamp": "2016-08-23 01:12:30.988729+00:00",
+      "state": "available",
+      "type": "nova.host",
+      "update_timestamp": "2016-08-23 01:12:30.851257+00:00",
+      "vitrage_id": "RESOURCE:nova.host:vitrage-trusty"
+    },
+    {
+      "aggregated_state": "ACTIVE",
+      "category": "RESOURCE",
+      "graph_index": 4,
+      "id": "26d90e70-bb4a-4760-8a67-6b7e625f0846",
+      "is_deleted": false,
+      "is_placeholder": false,
+      "name": "nano-1",
+      "operational_state": "OK",
+      "project_id": "d252fae16fad4656a8c854f5b93cdbc2",
+      "sample_timestamp": "2016-08-23 01:12:30.614306+00:00",
+      "state": "ACTIVE",
+      "type": "nova.instance",
+      "update_timestamp": "2016-08-23 01:12:30.614306+00:00",
+      "vitrage_id": "RESOURCE:nova.instance:26d90e70-bb4a-4760-8a67-6b7e625f0846"
+    },
+    {
+      "aggregated_state": "AVAILABLE",
+      "category": "RESOURCE",
+      "graph_index": 5,
+      "id": "openstack.cluster",
+      "is_deleted": false,
+      "is_placeholder": false,
+      "name": "openstack.cluster",
+      "operational_state": "OK",
+      "state": "available",
+      "type": "openstack.cluster",
+      "vitrage_id": "RESOURCE:openstack.cluster"
+    },
+    {
+      "aggregated_severity": "LOW",
+      "category": "ALARM",
+      "id": "ALARM:vitrage:host updated:RESOURCE:nova.host:vitrage-trusty",
+      "is_deleted": false,
+      "is_placeholder": false,
+      "name": "host updated",
+      "operational_severity": "N/A",
+      "sample_timestamp": "2016-08-22 04:02:19.949867+00:00",
+      "severity": "low",
+      "state": "Active",
+      "type": "vitrage",
+      "update_timestamp": "2016-08-22T04:02:19Z",
+      "vitrage_id": "ALARM:vitrage:host updated:RESOURCE:nova.host:vitrage-trusty"
+    },
+    {
+      "aggregated_state": "IN-USE",
+      "category": "RESOURCE",
+      "graph_index": 7,
+      "id": "f141b0f1-b170-4073-85f1-fa325cdce94a",
+      "is_deleted": false,
+      "is_placeholder": false,
+      "operational_state": "OK",
+      "project_id": "d252fae16fad4656a8c854f5b93cdbc2",
+      "sample_timestamp": "2016-08-23 01:12:30.738216+00:00",
+      "state": "in-use",
+      "type": "cinder.volume",
+      "update_timestamp": "2016-08-10T02:59:55.000000",
+      "vitrage_id": "RESOURCE:cinder.volume:f141b0f1-b170-4073-85f1-fa325cdce94a"
+    },
+    {
+      "aggregated_state": "AVAILABLE",
+      "category": "RESOURCE",
+      "graph_index": 8,
+      "id": "nova",
+      "is_deleted": false,
+      "is_placeholder": false,
+      "name": "nova",
+      "operational_state": "OK",
+      "sample_timestamp": "2016-08-23 01:12:30.988729+00:00",
+      "state": "available",
+      "type": "nova.zone",
+      "update_timestamp": "2016-08-23 01:12:30.988729+00:00",
+      "vitrage_id": "RESOURCE:nova.zone:nova"
+    },
+    {
+      "aggregated_severity": "LOW",
+      "category": "ALARM",
+      "id": "ALARM:vitrage:instance updated:RESOURCE:nova.instance:26d90e70-bb4a-4760-8a67-6b7e625f0846",
+      "is_deleted": false,
+      "is_placeholder": false,
+      "name": "instance updated",
+      "operational_severity": "N/A",
+      "sample_timestamp": "2016-08-22 04:02:19.916405+00:00",
+      "severity": "low",
+      "state": "Active",
+      "type": "vitrage",
+      "update_timestamp": "2016-08-22T04:02:19Z",
+      "vitrage_id": "ALARM:vitrage:instance updated:RESOURCE:nova.instance:26d90e70-bb4a-4760-8a67-6b7e625f0846"
+    }
+  ]
+}
