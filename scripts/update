@@ -5,3 +5,7 @@ git pull
 printf "Updating vitrage\n"
 cd /opt/stack/vitrage
 git pull
+
+printf "Updating vitrage-dashboard\n"
+cd /opt/stack/vitrage-dashboard
+git pull
