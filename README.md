@@ -13,7 +13,7 @@ $ vitrage-ssh
 In guest
 
 ```
-$ curl -L https://raw.githubusercontent.com/openzero-zte/vitrage-demo/master/vitrage-install|sudo bash
+$ curl -L https://raw.githubusercontent.com/openzero-zte/vitrage-demo/master/install|sudo bash
 ```
 
 See also https://help.ubuntu.com/lts/serverguide/cloud-images-and-uvtool.html
