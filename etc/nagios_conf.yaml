@@ -1,0 +1,13 @@
+nagios:
+ - nagios_host: cloud
+   type: nova.host
+   name: ${nagios_host}
+
+ - nagios_host: devstack
+   type: nova.host
+   name: ${nagios_host}
+
+ - nagios_host: instance-(.*)
+   type: nova.instance
+   name: ${nagios_host}
+
